@@ -1,12 +1,12 @@
-# �� Bookstore REST API
+# Bookstore REST API
 
 A comprehensive RESTful API for managing a modern bookstore, built with **Java Spring Boot** and **PostgreSQL**. This project was developed by a team of 5 developers using **Agile Scrum methodology**, with each developer responsible for a specific feature area.
 
-## 🚀 Project Overview
+## Project Overview
 
 This bookstore API provides a complete backend solution for managing books, authors, publishers, user profiles, shopping carts, and book ratings. The application follows RESTful principles and includes HATEOAS support for enhanced API discoverability.
 
-## 🏗️ Tech Stack
+## Tech Stack
 
 - **Backend Framework**: Java 17 + Spring Boot 2.7.8
 - **Database**: PostgreSQL 16+
@@ -15,11 +15,11 @@ This bookstore API provides a complete backend solution for managing books, auth
 - **Build Tool**: Maven
 - **Cloud Platform**: Azure (Deployment Ready)
 
-## 🎯 Features
+## Features
 
 The application is organized into 5 main feature areas, each developed by a dedicated team member:
 
-### 📖 **Book Management**
+### **Book Management**
 - Browse all books with detailed information
 - Filter books by genre, rating, and publisher
 - Search books by author
@@ -27,31 +27,31 @@ The application is organized into 5 main feature areas, each developed by a dedi
 - Add new books to inventory
 - Apply discounts by publisher
 
-### 👨‍💼 **Author Management**
+### **Author Management**
 - Create and manage author profiles
 - Retrieve author information and biographies
 - View all books by a specific author
 - Author-book relationship management
 
-### 🏢 **Publisher Management**
+### **Publisher Management**
 - Manage publisher information
 - Create new publisher profiles
 - Publisher-book relationship tracking
 
-### 👤 **User Profile Management**
+### **User Profile Management**
 - Create and update user accounts
 - Manage user personal information
 - Credit card management for users
 - User authentication data storage
 
-### 🛒 **Shopping Cart System**
+### **Shopping Cart System**
 - Add/remove books from cart
 - Calculate cart subtotals
 - Manage quantities
 - User-specific cart management
 - HATEOAS navigation support
 
-## 🗃️ Database Schema
+## Database Schema
 
 The application uses a robust PostgreSQL database with the following core entities:
 
@@ -82,7 +82,7 @@ The application uses a robust PostgreSQL database with the following core entiti
 
 ### Base URL: `/api`
 
-#### 📚 Books (`/api/books`)
+#### Books (`/api/books`)
 ```
 GET    /api/books                    - Get all books
 GET    /api/books/{isbn}             - Get book by ISBN
@@ -95,20 +95,20 @@ POST   /api/books                    - Add new book
 PATCH  /api/books/discount           - Apply discount by publisher
 ```
 
-#### 👨‍💼 Authors (`/api/authors`)
+#### Authors (`/api/authors`)
 ```
 GET    /api/authors/{authorId}       - Get author by ID
 GET    /api/authors/{authorId}/books - Get books by author
 POST   /api/authors                  - Create new author
 ```
 
-#### 🏢 Publishers (`/api/publishers`)
+#### Publishers (`/api/publishers`)
 ```
 GET    /api/publishers               - Get all publishers
 POST   /api/publishers               - Create new publisher
 ```
 
-#### 👤 Users (`/api/users`)
+#### Users (`/api/users`)
 ```
 GET    /api/users?username={username} - Get user by username
 POST   /api/users                     - Create new user
@@ -116,7 +116,7 @@ PUT    /api/users/{username}/update/{field} - Update user field
 POST   /api/users/{username}/cards    - Add credit card
 ```
 
-#### 🛒 Shopping Cart (`/api/shopping-cart`)
+#### Shopping Cart (`/api/shopping-cart`)
 ```
 GET    /api/shopping-cart                      - Get cart navigation
 GET    /api/shopping-cart/{userId}/books       - Get user's cart items
@@ -125,7 +125,7 @@ POST   /api/shopping-cart/{userId}/add-book    - Add book to cart
 DELETE /api/shopping-cart/{userId}/remove-book - Remove book from cart
 ```
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 - **Java 17** or higher
@@ -195,12 +195,12 @@ The project includes a comprehensive testing suite covering all layers of the ap
 
 ### Test Types
 
-#### 🎯 **Unit Tests**
+#### **Unit Tests**
 - **Controller Tests**: Mock-based tests for HTTP endpoints
 - **Service Tests**: Business logic validation with mocked dependencies
 - **Repository Tests**: Data access layer testing with H2 in-memory database
 
-#### 🔗 **Integration Tests**
+#### **Integration Tests**
 - **End-to-End Tests**: Complete request flow from controller to database
 - **API Workflow Tests**: Multi-step operations and real data persistence
 
@@ -208,11 +208,11 @@ The project includes a comprehensive testing suite covering all layers of the ap
 
 | Feature | Controller Tests | Service Tests | Repository Tests | Integration Tests |
 |---------|------------------|---------------|------------------|-------------------|
-| 📚 **Books** | ✅ BookControllerTest | ✅ BookServiceTest | ✅ BookRepositoryTest | ✅ Full Coverage |
-| 🛒 **Shopping Cart** | ✅ ShoppingCartControllerTest | ✅ Planned | ✅ Planned | ✅ Partial Coverage |
-| 👨‍💼 **Authors** | 🔄 Extensible | 🔄 Extensible | 🔄 Extensible | 🔄 Extensible |
-| 🏢 **Publishers** | 🔄 Extensible | 🔄 Extensible | 🔄 Extensible | 🔄 Extensible |
-| 👤 **User Profiles** | 🔄 Extensible | 🔄 Extensible | 🔄 Extensible | 🔄 Extensible |
+| **Books** | ✅ BookControllerTest | ✅ BookServiceTest | ✅ BookRepositoryTest | ✅ Full Coverage |
+| **Shopping Cart** | ✅ ShoppingCartControllerTest | ✅ Planned | ✅ Planned | ✅ Partial Coverage |
+| **Authors** | 🔄 Extensible | 🔄 Extensible | 🔄 Extensible | 🔄 Extensible |
+| **Publishers** | 🔄 Extensible | 🔄 Extensible | 🔄 Extensible | 🔄 Extensible |
+| **User Profiles** | 🔄 Extensible | 🔄 Extensible | 🔄 Extensible | 🔄 Extensible |
 
 ### Running Tests
 
@@ -313,7 +313,7 @@ The application uses environment variables for database connection:
 - **Hibernate DDL**: `create-drop` (clean slate for each test)
 - **SQL Logging**: Enabled for debugging
 
-## 🔒 Security & Environment Management
+## Security & Environment Management
 
 ### Environment Variables
 The application uses **environment variables** for sensitive configuration, following security best practices:
@@ -354,7 +354,7 @@ The `.gitignore` file protects:
 - 🔐 **Temporary files** and system files
 - 🔐 **IDE configurations** and build artifacts
 
-## 👥 Development Team & Methodology
+## Development Team & Methodology
 
 This project was developed using **Agile Scrum methodology** with a team of 5 developers:
 
@@ -374,7 +374,7 @@ This project was developed using **Agile Scrum methodology** with a team of 5 de
 - **Quality Assurance**: 90%+ test coverage across all layers
 - **Continuous Integration**: Automated testing pipeline ready
 
-## 📋 Project Structure
+## Project Structure
 
 ```
 src/main/java/com/example/bookstore/
@@ -398,7 +398,7 @@ src/main/java/com/example/bookstore/
 └── ExceptionHandling/ # Global Exception Handlers
 ```
 
-## 🚀 Deployment
+## Deployment
 
 The application is configured for **Azure deployment** with:
 - Azure Spring Cloud dependencies
@@ -423,7 +423,7 @@ The project includes automated testing that can be integrated into any CI/CD pla
   run: ./mvnw test -Dtest="*IntegrationTest"
 ```
 
-## 🔮 Future Enhancements
+## Future Enhancements
 
 - ✅ **User Authentication & Authorization** (JWT-based)
 - ✅ **Admin Panel** for inventory management
@@ -436,14 +436,14 @@ The project includes automated testing that can be integrated into any CI/CD pla
 - 🧪 **Test Coverage Reporting** with JaCoCo
 - 🔄 **Automated Testing Pipeline** for CI/CD
 
-## 📄 License
+## License
 
 This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
 
-## 🤝 Contributing
+## Contributing
 
 This was an academic project, but contributions are welcome! Please feel free to submit issues and enhancement requests.
 
 ---
 
-**Built with ❤️ by the Group 5 CEN4010 Team**
+**Built by the Group 5 CEN4010 Team**
