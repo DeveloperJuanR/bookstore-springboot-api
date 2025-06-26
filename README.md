@@ -78,7 +78,7 @@ The application uses a robust PostgreSQL database with the following core entiti
 - **Users ↔ Ratings**: One-to-Many relationship
 - **Shopping Carts ↔ Books**: Many-to-Many via `shopping_cart_items`
 
-## 🛠️ API Endpoints
+## API Endpoints
 
 ### Base URL: `/api`
 
@@ -189,7 +189,7 @@ curl -X POST http://localhost:8080/api/shopping-cart/1/add-book \
   -d '{"isbn": "9780123456789"}'
 ```
 
-## 🧪 Testing
+## Testing
 
 The project includes a comprehensive testing suite covering all layers of the application with **90%+ code coverage**.
 
@@ -294,7 +294,7 @@ The project follows **TDD principles**:
 3. **Refactor**: Improve code while maintaining tests
 4. **Repeat**: Continuous improvement cycle
 
-## 🔧 Configuration
+## Configuration
 
 ### Database Configuration
 The application uses environment variables for database connection:
