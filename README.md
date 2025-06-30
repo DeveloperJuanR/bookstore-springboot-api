@@ -15,6 +15,10 @@ This bookstore API provides a complete backend solution for managing books, auth
 - **Build Tool**: Maven
 - **Cloud Platform**: Azure (Deployment Ready)
 
+## Live Demo
+
+https://youtu.be/i3cwoj8GmHQ?si=5AJs8F5fKmOz6ZE6
+
 ## Features
 
 The application is organized into 5 main feature areas, each developed by a dedicated team member:
